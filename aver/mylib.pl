@@ -1,1 +1,0 @@
-:- use_foreign_library(foreign(mylib)).
