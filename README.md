@@ -24,4 +24,9 @@ The following is the folder structure for the proyect.
 \- tests: 
 
 
-  
+## How to use
+
+connect_db(-Conn,+Options).
+Get a connection with a given options.
+
+The options can be given in the following formats: Dict, JSON or array of strings with the format 'key: value'
