@@ -8,9 +8,11 @@ BUILD_PATH = build
 SRC_PATH = src
 
 INCS = -I/usr/include/postgresql/ -I/usr/lib/swi-prolog/include/ 
-FLAGS = -fpic -lpq -g -Wall
+CFLAGS = -fpic -lpq -g -Wall
 
-all: $(BUILD_PATH)/$(BIN)
+SHARED = $(BUILD_PATH)/conn.so
+
+all: $(BUILD_PATH)/$(SHARED)
 
 $(BUILD_PATH)/conn.so: $(BUILD_PATH)/conn.o
 	gcc -shared -o conn.so conn.o $(FLAGS)
@@ -22,7 +24,7 @@ clean:
 	rm -rf $(BIN_FOLDER)*
 
 help: 
-	#Display the help
+	@echo "PROGRESS MAKE HELP: \n hola"
 
 install:
 	#Install the module to use at library
